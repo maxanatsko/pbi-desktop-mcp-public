@@ -1,11 +1,5 @@
 <p align="center">
-  <svg width="96" height="96" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCP Engine Logo">
-    <title>MCP Engine Logo</title>
-    <polygon points="24,24 64,24 64,64" fill="#000"/>
-    <polygon points="104,24 104,64 64,64" fill="#000"/>
-    <polygon points="104,104 64,104 64,64" fill="#ff0000"/>
-    <polygon points="24,104 24,64 64,64" fill="#000"/>
-  </svg>
+  <img src="mcp-engine-logo.svg" alt="MCP Engine Logo" width="96" height="96">
 </p>
 <h1 align="center" style="font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: -0.011em;">MCP ENGINE</h1>
 <p align="center" style="font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">Rollback mistakes. Test before deploy. Control what AI can change.</p>

@@ -1,0 +1,7 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pinwheel turbine - 4 right-angle triangles -->
+  <polygon points="24,24 64,24 64,64" fill="#000"/>
+  <polygon points="104,24 104,64 64,64" fill="#000"/>
+  <polygon points="104,104 64,104 64,64" fill="#ff0000"/>
+  <polygon points="24,104 24,64 64,64" fill="#000"/>
+</svg>

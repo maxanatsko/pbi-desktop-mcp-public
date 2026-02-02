@@ -1,8 +1,8 @@
-Power BI Desktop MCP Server License (Proprietary)
+MCP Engine License (Proprietary)
 
-Copyright (c) 2025 Maxim Anatsko / WarpBI. All rights reserved.
+Copyright (c) 2025 Maxim Anatsko. All rights reserved.
 
-By downloading, installing, or using the Power BI Desktop MCP Server
+By downloading, installing, or using the MCP Engine
 ("Software"), you agree to these terms.
 
 
@@ -70,7 +70,7 @@ Source code is not provided.
 4. OWNERSHIP
 
 The Software is proprietary. All title and intellectual property rights
-remain with Maxim Anatsko / WarpBI.
+remain with Maxim Anatsko.
 
 
 5. TERMINATION
@@ -89,7 +89,7 @@ FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 
 7. LIMITATION OF LIABILITY
 
-IN NO EVENT SHALL MAXIM ANATSKO, WARPBI, OR CONTRIBUTORS BE LIABLE FOR
+IN NO EVENT SHALL MAXIM ANATSKO, OR CONTRIBUTORS BE LIABLE FOR
 ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
 DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, PROFITS, OR BUSINESS
 INTERRUPTION, ARISING OUT OF OR RELATED TO USE OF THE SOFTWARE, HOWEVER

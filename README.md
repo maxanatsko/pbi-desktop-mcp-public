@@ -4,6 +4,14 @@
 <h1 align="center" style="font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: -0.011em;">MCP ENGINE</h1>
 <p align="center" style="font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">Rollback mistakes. Test before deploy. Control what AI can change.</p>
 <p align="center">
+  <img src="mcp-engine-demo.gif" alt="MCP Engine Demo" width="100%">
+</p>
+<p align="center">
+  <a href="https://github.com/maxanatsko/pbi-desktop-mcp-public/releases">
+    <img src="https://img.shields.io/badge/Latest%20Release-Download%20Now-cc0000?style=for-the-badge&logo=github&logoColor=white" alt="Download Latest Release" height="50">
+  </a>
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/license-Proprietary-black" alt="License">
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS-black" alt="Platform">
   <img src="https://img.shields.io/badge/status-Stable-black" alt="Status">

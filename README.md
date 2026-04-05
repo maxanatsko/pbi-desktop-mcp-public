@@ -7,7 +7,7 @@
   <img src="mcp-engine-demo.gif" alt="MCP Engine Demo" width="100%">
 </p>
 <p align="center">
-  <a href="https://github.com/maxanatsko/pbi-desktop-mcp-public/releases">
+  <a href="https://github.com/maxanatsko/mcp-engine-public/releases">
     <img src="https://img.shields.io/badge/Latest%20Release-Download%20Now-cc0000?style=for-the-badge&logo=github&logoColor=white" alt="Download Latest Release" width="400">
   </a>
 </p>
@@ -20,7 +20,7 @@
 ## Quick Links
 
 - [**Full Documentation**](https://www.mcpengine.dev) - Installation, guides, and examples
-- [**Download Latest Release**](https://github.com/maxanatsko/pbi-desktop-mcp-public/releases)
+- [**Download Latest Release**](https://github.com/maxanatsko/mcp-engine-public/releases)
 - [**Get Support**](https://www.mcpengine.dev/faq) - FAQ and troubleshooting
 
 ## What It Does

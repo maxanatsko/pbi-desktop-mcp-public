@@ -9,7 +9,7 @@ Use this workflow when assessing a Power BI semantic model for Copilot, Fabric d
 - AI instructions and AI data schemas save to model metadata/LSDL. Git or deployment pipeline edits can require a model refresh in the Power BI service before Copilot reflects the changes.
 - Verified answers are human-approved visual responses with trigger phrases and optional filters. They require Power BI Q&A to be enabled and are saved on the semantic model.
 - AI data schemas define focused fields for Copilot data-question capabilities. They are not a universal filter for every Copilot capability.
-- A semantic model can be marked Approved for Copilot in the Power BI service, but that is a service setting and not a live MCP Engine model-write operation.
+- A semantic model can be marked Approved for Copilot in the Power BI service, but that is a service setting and not a live SemanticOps MCP model-write operation.
 
 Sources:
 - https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai

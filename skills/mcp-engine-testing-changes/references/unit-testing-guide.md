@@ -771,7 +771,7 @@ When numeric/PII masking is enabled:
 
 Bundled Test Runner note:
 - The desktop Test Runner sidecar force-disables numeric and PII masking for its own engine process so the app can display raw query and test result values.
-- It still uses the same `~/.mcp-engine` tests, baselines, and persisted run storage as the main MCP Engine installation.
+- It still uses the same `~/.mcp-engine` tests, baselines, and persisted run storage as the main SemanticOps MCP installation.
 - This override is process-local; regular MCP clients continue to honor the user's masking preferences.
 
 ---

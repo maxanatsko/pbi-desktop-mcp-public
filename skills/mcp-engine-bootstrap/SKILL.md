@@ -1,6 +1,6 @@
 ---
 name: mcp-engine-bootstrap
-description: Prepare and recover Power BI MCP Engine sessions. Use when starting a session, connecting to a model, checking current connection, applying preferences, selecting the right tool family, troubleshooting empty results or stale metadata, or fixing malformed tool arguments and bulk payloads.
+description: Prepare and recover Power BI SemanticOps MCP sessions. Use when starting a session, connecting to a model, checking current connection, applying preferences, selecting the right tool family, troubleshooting empty results or stale metadata, or fixing malformed tool arguments and bulk payloads.
 ---
 
 # PBI Bootstrap

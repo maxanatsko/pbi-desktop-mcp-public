@@ -16,7 +16,7 @@ Ask for:
 
 ## Grounding Checks
 
-When MCP Engine tools are available, inspect current state before final recommendations:
+When SemanticOps MCP tools are available, inspect current state before final recommendations:
 
 - Use `manage_model_connection` with `operation: "get_current"` to determine whether a model is already selected.
 - If no model is connected and the user wants model-specific setup, use `manage_model_connection` with `operation: "list"` and ask the user which model to select.

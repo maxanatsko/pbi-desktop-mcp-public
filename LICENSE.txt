@@ -1,8 +1,8 @@
-MCP Engine License (Proprietary)
+SemanticOps MCP License (Proprietary)
 
 Copyright (c) 2025 Maxim Anatsko. All rights reserved.
 
-By downloading, installing, or using the MCP Engine
+By downloading, installing, or using SemanticOps MCP
 ("Software"), you agree to these terms.
 
 

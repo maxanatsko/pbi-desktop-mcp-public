@@ -72,7 +72,7 @@ Include:
 
 Provide prompts tailored to the profile, such as:
 
-- "Check my current MCP Engine connection and tell me what mode and model I am using."
+- "Check my current SemanticOps MCP connection and tell me what mode and model I am using."
 - "Preview the recommended policy packs for this workflow, but do not apply them yet."
 - "Preview starter test packs for this model and explain what each generated test would cover."
 - "Help me make this model change safely, with dependency impact and validation before edits."

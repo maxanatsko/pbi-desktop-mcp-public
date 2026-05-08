@@ -37,6 +37,16 @@ Out of scope for model-change transactions:
 
 - local/admin writes such as preferences, policies, test definitions, audit maintenance, license state, and connection state
 
+## Operations Requiring Confirmation
+
+These operations require interactive confirmation. If the client does not support elicitation, pass `confirm=true`:
+
+- `rollback_transaction`
+- `restore_checkpoint`
+- `delete_checkpoint`
+- `undo`
+- `redo`
+
 ## Storage and Configuration
 
 Model changes are stored locally (per user) under:
@@ -215,6 +225,8 @@ If the client doesn't support elicitation:
 ```
 
 ### Delete a checkpoint
+
+Deleting a checkpoint requires confirmation. If the client doesn't support elicitation, re-run with `confirm=true`.
 
 ```json
 { "operation": "delete_checkpoint", "checkpoint_id": "snap_xyz789" }

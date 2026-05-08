@@ -42,7 +42,7 @@ Optional formatting:
 - `format_m`: only applies when `partition_type: "M"` and `expression_kind` is literal
 - `format_dax`: only applies when `partition_type: "Calculated"` and `expression_kind` is literal
 - `query_group`: optional for M partitions to place the table query into a Power Query group
-- `partition_name`: optional on `create_table`; when omitted, SemanticOps MCP uses `<TableName>_Partition`
+- `partition_name`: optional on `create_table`; when omitted, SemanticOps MCP, formerly MCP Engine, uses `<TableName>_Partition`
 - `partition_name`: required on `create_partition`
 
 ### Create an M table (requires `columns`)

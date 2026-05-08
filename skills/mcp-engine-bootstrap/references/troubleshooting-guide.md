@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-This guide lists common issues when using SemanticOps MCP (the MCP server for Power BI Desktop) and practical steps to resolve them.
+This guide lists common issues when using SemanticOps MCP, formerly MCP Engine, and practical steps to resolve them for Power BI Desktop workflows.
 
 ## Related Tools and Resources
 

@@ -186,7 +186,7 @@ Freeform fields such as `Comment`, `Notes`, `Description`, `Message`, `Feedback`
 `TicketText`, `ChatTranscript`, `Kommentar`, `Beschreibung`, and `Mensaje` are handled differently
 from dedicated fields such as `Email`, `Phone`, `DOB`, or `TaxId`.
 
-By default, freeform text uses `StructuredAndContextual` mode. SemanticOps MCP scans for high-confidence
+By default, freeform text uses `StructuredAndContextual` mode. SemanticOps MCP, formerly MCP Engine, scans for high-confidence
 structured PII spans and redacts each accepted non-overlapping span while preserving surrounding text.
 It can also redact likely names, addresses, or handles when surrounding wording and model context
 indicate the text is about a customer, contact, employee, patient, or user. Multiple embedded values

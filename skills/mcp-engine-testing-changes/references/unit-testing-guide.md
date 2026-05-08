@@ -119,6 +119,28 @@ The Tauri test runner uses `runs_list` to hydrate persisted run history for the 
 ```
 
 Note: `transaction: true` is fail-fast bulk behavior. The handler stops on the first item error, but it does not wrap the batch in a single atomic rollback transaction.
+`total_items` reports the submitted `items` array length, even when fail-fast stops processing early.
+
+Bulk `put` also accepts per-item single-call shape when the test definition is nested under each item's `spec`.
+This is useful when each item has its own `target` fallback:
+
+```json
+{
+  "operation": "put",
+  "items": [
+    {
+      "target": "test-1",
+      "spec": {
+        "id": "test-1",
+        "name": "Example test",
+        "type": "measure_assertion",
+        "spec": { "measure": "Sales[Total Sales]" }
+      },
+      "assert": { "kind": "scalar", "op": "gte", "expected": { "type": "number", "value": 0 } }
+    }
+  ]
+}
+```
 
 Bulk delete:
 
@@ -237,6 +259,8 @@ Test that RLS roles filter data correctly:
 Note: `rls_effective_user` capability (identity impersonation) requires Power BI Service XMLA endpoint.
 The impersonated identity must also have both Read and Build permission on the semantic model. `Build` enables XMLA/query access; it does not bypass RLS for Viewer users.
 Current scope:
+- RLS principals must use `{ "role": "RoleName" }` or `{ "role": "RoleName", "identity": "user@contoso.com" }`.
+- Do not use `{ "kind": "role", "name": "RoleName" }`; `kind` and `name` are not supported principal fields for `rls_validation`.
 - Legacy row-bounds assertions remain supported via `kind: "table"`, `op: "row"`, optional `path`, and `per_principal` min/max bounds.
 - Canonical direct assertions use `kind: "rls"` with one expectation per principal.
 - Supported canonical operators are `query_succeeds`, `query_fails`, `is_blank`, `is_not_blank`, `equals`, `row_count_equals`, `row_count_min`, `row_count_max`, and `row_count_between`.
@@ -538,7 +562,7 @@ Notes:
 { "operation": "run", "spec": { "test_ids": ["total-sales-2024", "yoy-performance"] } }
 ```
 
-Use canonical `spec.test_ids`. The alias `spec.ids` may be normalized on input, but prompts and saved examples should use `test_ids`.
+Use canonical `spec.test_ids`. The alias `spec.ids` is accepted for compatibility, but prompts and saved examples should use `test_ids`.
 
 ### Stop on first failure
 
@@ -771,7 +795,7 @@ When numeric/PII masking is enabled:
 
 Bundled Test Runner note:
 - The desktop Test Runner sidecar force-disables numeric and PII masking for its own engine process so the app can display raw query and test result values.
-- It still uses the same `~/.mcp-engine` tests, baselines, and persisted run storage as the main SemanticOps MCP installation.
+- It still uses the same `~/.mcp-engine` tests, baselines, and persisted run storage as the main SemanticOps MCP installation, formerly MCP Engine.
 - This override is process-local; regular MCP clients continue to honor the user's masking preferences.
 
 ---

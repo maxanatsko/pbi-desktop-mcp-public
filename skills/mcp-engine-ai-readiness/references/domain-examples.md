@@ -77,4 +77,3 @@ Verified-answer candidates:
 - Capacity utilization by week.
 - On-time completion rate by work center.
 - Backlog by priority and due date.
-

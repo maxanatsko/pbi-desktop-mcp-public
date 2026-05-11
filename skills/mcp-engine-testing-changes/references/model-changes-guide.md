@@ -69,13 +69,15 @@ Additional environment knobs:
 { "operation": "list_transactions", "limit": 10, "offset": 0 }
 ```
 
-Response includes a `pagination` object with `total`, `has_more`, `next_offset`. Default limit: 50, max: 1000 (configurable).
+Response includes a `pagination` object with `total`, `has_more`, `next_offset`. Default limit: 50, max: 1000 (configurable). Failed batch transactions also include durable rollback fields: `rollback_outcome`, `rollback_error`, and `rollback_completed_at`.
 
 ### Get a transaction record
 
 ```json
 { "operation": "get_transaction", "transaction_id": "txn_abc123" }
 ```
+
+Transaction details include rollback state for failed batches. `rollback_outcome` is one of `notattempted`, `succeeded`, `failed`, or `unavailable`; `rollback_completed_at` is populated when a failed batch rollback path is finalized, and `rollback_error` is populated when a rollback failed or could not run.
 
 ### Diff a transaction
 
@@ -243,6 +245,8 @@ Backward compatibility: older clients used `transaction_id` as the identifier fo
 ## Changesets (Queue and Apply Multiple Operations)
 
 Changesets let you stage multiple tool calls and apply them as a batch.
+
+Changesets are scoped to the model that created them. Direct `changeset_id` operations such as add, preview, apply, and delete are rejected when the active connection is a different model. Connection-management operations cannot be queued or replayed inside changesets.
 
 Lifecycle:
 - `draft`: can be updated, previewed, applied, or deleted

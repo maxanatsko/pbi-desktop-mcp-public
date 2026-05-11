@@ -83,9 +83,9 @@ Use the MCP `tools/list` method (and each tool's `inputSchema`) to confirm param
 
 Write tools generally validate `spec` keys and will return an error for unknown/unsupported properties (to avoid silently ignoring typos).
 
-## Online Formatting Helpers (`format_dax`, `format_m`)
+## Formatting Helpers (`format_dax`, `format_m`)
 
-Some write operations support optional online formatting for expressions before saving.
+Some write operations support optional formatting for expressions before saving.
 
 ### DAX formatting (`format_dax`)
 
@@ -93,9 +93,11 @@ Used by DAX-bearing operations (e.g., calculated partitions, measures, calc item
 
 ```json
 {
-  "format_dax": { "enabled": true, "consent": true, "on_error": "fail" }
+  "format_dax": { "enabled": true, "on_error": "fail" }
 }
 ```
+
+DAX formatting runs locally and does not require consent.
 
 ### M formatting (`format_m`)
 

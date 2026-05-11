@@ -342,8 +342,9 @@ Important default in this release:
 Known best-effort gaps:
 
 - name/address heuristics are still metadata-driven and intentionally conservative
-- numeric masking can still be bypassed by converting numbers to strings with functions such as `FORMAT`, `FIXED`, or string concatenation
-- numeric masking does not attempt to reinterpret arbitrary stringified numbers in this release; those paths remain documented best-effort gaps
+- parser-backed numeric masking redacts `FORMAT`-style text outputs when final-output provenance resolves to maskable numeric source columns
+- arbitrary stringified numbers, parser-unavailable queries, unsupported conversions, and unknown or ambiguous text provenance remain best-effort gaps
+- numeric masking does not attempt to reinterpret arbitrary stringified numbers without parser provenance in this release
 - arbitrary DAX expressions are not rewritten or blocked in this release
 
 ## Logging Redaction vs Data Masking

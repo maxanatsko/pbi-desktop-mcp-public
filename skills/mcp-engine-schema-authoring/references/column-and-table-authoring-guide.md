@@ -91,7 +91,7 @@ Optional formatting:
     "partition_name": "TopCustomers",
     "partition_type": "Calculated",
     "expression": "TOPN(100, SUMMARIZECOLUMNS('Customer'[CustomerId], \"Sales\", [Total Sales]), [Sales], DESC)",
-    "format_dax": { "enabled": true, "consent": true },
+    "format_dax": { "enabled": true },
     "process": true
   }
 }

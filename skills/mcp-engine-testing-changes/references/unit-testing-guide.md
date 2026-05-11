@@ -461,8 +461,8 @@ Available rules:
 - `visible_measures_have_display_folder`
 - `visible_columns_have_display_folder`
 - `date_table_marked`
-  - no params: assert that the model has some marked date table
-  - with `params.table`: assert that a specific table is the marked date table
+  - no params: assert that the model has some marked date table or non-system modern calendar
+  - with `params.table`: assert that a specific table is the marked date table or owns a non-system modern calendar
 
 Discovery and aliases:
 - `operation: "capabilities"` returns `metadata_compliance.rules` with the built-in rule catalog, `metadata_compliance.entity_types`, canonical `assertion_list_field: "rules"`, and accepted aliases.
@@ -512,6 +512,8 @@ All table name comparisons are case-insensitive. Both `entity_types` and table f
 ```json
 { "operation": "packs_list" }
 ```
+
+When a model is connected, each returned pack includes `applied`, `applied_test_count`, nullable `generated_test_count`, and nullable `applied_generated_test_count`. Applied counts are based on stored tests whose `source_pack` matches the pack id, while generated counts represent the current model-specific tests that the pack would generate. `applied_generated_test_count` is the intersection used for current coverage such as `2/3`. Without enough model context, packs remain listable but the generated coverage fields are omitted from the response (they are nullable and serialized with `WhenWritingNull`, so clients should treat missing and `null` equivalently).
 
 ### Apply a pack
 
